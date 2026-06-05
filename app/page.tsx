@@ -12,7 +12,7 @@ export default function Home() {
         subtitle="We build ultra-fast, mobile-first websites for Canadian trades and service businesses. Get a high-performance site built to load instantly and turn clicks into scheduled jobs."
         backgroundImage="/building.jpg" // Add a nice local trade or clean background image later
       />  
-      
+       
       <SplitSection 
         tagline="Built for Speed & SEO"
         title="Outrun your competitors on Google and mobile screens"
