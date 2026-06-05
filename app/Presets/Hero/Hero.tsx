@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import styles from "./Hero.module.css";
 
 type HeroProps = {
@@ -9,16 +10,21 @@ type HeroProps = {
 };
 
 export default function Hero({ title, subtitle, backgroundImage }: HeroProps) {
-  // Layer a 40% black overlay on top of the dynamic background image
-  const heroStyle = {
-    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${backgroundImage})`,
-  };
-
   return (
-    <section className={styles.hero} style={heroStyle}>
+    <section className={styles.hero}>
+      <Image
+        src={backgroundImage}
+        alt="Hero background"
+        fill
+        priority
+        loading="eager"
+        className={styles.heroImage}
+      />
+      <div className={styles.overlay} />
+
       <div className={styles.content}>
         <h1 className={styles.title}>{title}</h1>
-        <p className={styles.subtitle}>{subtitle}</p> 
+        <p className={styles.subtitle}>{subtitle}</p>
       </div>
     </section>
   );

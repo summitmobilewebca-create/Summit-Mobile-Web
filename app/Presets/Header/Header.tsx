@@ -25,7 +25,9 @@ export default function Header({ logoSrc, phoneNumber }: HeaderProps) {
         <>
         <header className={styles.header}>
         <div className={styles.headerLeft}>
-            <img className={styles.logo} src={logoSrc} alt="Logo" />
+            <a href="#">
+                <img className={styles.logo} src={logoSrc} alt="Logo"/>
+            </a>
         </div>
 
         <nav className={styles.headerNav}>

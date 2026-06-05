@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import Image from "next/image";
 import styles from "./SplitSection.module.css";
 
 type SplitSectionProps = {
@@ -56,7 +56,7 @@ export default function SplitSection({
         {/* Image Side */}
         <div className={styles.imageSide}>
           <div className={styles.imageWrapper}>
-            <img src={imageUrl} alt={imageAlt} className={styles.image} />
+            <Image src={imageUrl} alt={imageAlt} className={styles.image} fill loading="lazy"></Image>
           </div>
         </div>
 

@@ -8,6 +8,7 @@ import Header from "./Presets/Header/Header";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: 'swap',
 });
 
 const geistMono = Geist_Mono({
@@ -31,7 +32,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col overflow-x-hidden">
-        <Header logoSrc="summit-logo.png" phoneNumber="SummitMobileWeb.ca@gmail.com"></Header>
+        <Header logoSrc="summit-logo.webp" phoneNumber="SummitMobileWeb.ca@gmail.com"></Header>
         {children}</body> 
         <Analytics></Analytics>
         <SpeedInsights></SpeedInsights>
