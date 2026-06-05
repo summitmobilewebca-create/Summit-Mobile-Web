@@ -1,26 +1,34 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Background Colors */
+  --bg-pure-white: #ffffff;
+  --bg-emerald-badge: #ecfdf5; /* Tailwind's bg-emerald-50 */
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Text Colors */
+  --text-main-charcoal: #0f172a; /* Tailwind's text-slate-900 */
+  --text-muted-gray: #475569;     /* Tailwind's text-slate-600 */
+  --text-primary-accent: #2563eb; /* Tailwind's text-blue-600 */
+  --text-emerald-badge: #059669;  /* Tailwind's text-emerald-600 */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Interactive / Component Colors */
+  --bg-button-primary: #2563eb;   /* Tailwind's bg-blue-600 */
+  --bg-button-hover: #1d4ed8;     /* Tailwind's bg-blue-700 (Bonus for UX!) */
+
+  --headerHeight: 10vh;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg-pure-white);
+  color: var(--bg-emerald-badge);
   font-family: Arial, Helvetica, sans-serif;
 }
+ 
+h1 {
+  color: var(--text-main-charcoal); 
+} 
+
+p {
+  color: var(--text-main-charcoal);
+}
+ 

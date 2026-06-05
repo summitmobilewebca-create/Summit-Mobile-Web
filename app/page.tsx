@@ -1,65 +1,46 @@
 import Image from "next/image";
+import Hero from "./Presets/Hero/Hero";
+import ServiceGrid from "./Presets/Service Grid/ServiceGrid";
+import ContactForm from "./Presets/ContactForm/ContactForm";
+import SplitSection from "./Presets/SplitSection/SplitSection";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <Hero 
+        title="Most of your customers find you on a phone. Does your website close them?"
+        subtitle="We build ultra-fast, mobile-first websites for Canadian trades and service businesses. Get a high-performance site built to load instantly and turn clicks into scheduled jobs."
+        backgroundImage="/building.jpg" // Add a nice local trade or clean background image later
+      />  
+      
+      <SplitSection 
+        tagline="Built for Speed & SEO"
+        title="Outrun your competitors on Google and mobile screens"
+        description="Most local business sites are built on bloated platforms that take forever to load on a smartphone, costing you leads. At Summit Mobile Web, we engineer lean, custom-coded sites with built-in On-Page Local SEO foundations. No monthly fees—just blistering mobile speeds and clean code that Google loves."
+        imageUrl="/phone.jpg" // Consider swapping this out for a graphic of a phone mock-up later
+        imageAlt="Mobile responsive website preview"
+        buttonText="View Live Demo"
+        buttonLink="#demo" // Link to your master demo section/page
+      />
+
+      {/* About Section: Introducing you, the driven developer */}
+      <SplitSection 
+        tagline="Our Story"
+        title="Driven to build. Focused on your bottom line."
+        description="I am a dedicated Canadian web developer dedicating my summer to a singular mission: building the fastest, highest-converting mobile websites for local service businesses. When you work with Summit Mobile Web, you aren't paying for agency overhead—you are partnering directly with a motivated developer hungry to deliver real, measurable value to your business."
+        imageUrl="/building.jpg" // Put a professional, friendly shot of yourself here to build massive trust!
+        imageAlt="Summit Mobile Web Founder"
+        buttonText="Get a Free Mockup"
+        buttonLink="#contact"
+        reverse={true} // If your SplitSection component supports a reverse prop to alternate layout sides
+      />
+      <div id="service">
+        <ServiceGrid />
+      </div>
+      
+      <div id="contact" className="my-12">
+        <ContactForm />
+      </div>
+    </>
   );
 }
