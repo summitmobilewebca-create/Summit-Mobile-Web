@@ -16,7 +16,7 @@ export async function POST(request: Request) {
     // Send the email to your business address
     await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>", // Replace with your verified custom domain later
-      to: "chickenfingers257@gmail.com",        // Put YOUR real business inbox address here
+      to: "summitmobileweb.ca@gmail.com",        // Put YOUR real business inbox address here
       subject: `New Lead: ${name} via Contact Form`,
       replyTo: email, // Clicking 'Reply' in your inbox will automatically reply to the user's email
       html: `
