@@ -54,7 +54,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: var(--bg-pure-white, #0070f3);
+  color: var(--bg-button-primary, #0070f3);
   margin-bottom: 12px;
 }
 

@@ -20,7 +20,7 @@ export default function Home() {
         imageUrl="/phone.webp" // Consider swapping this out for a graphic of a phone mock-up later
         imageAlt="Mobile responsive website preview"
         buttonText="View Live Demo"
-        buttonLink="#demo" // Link to your master demo section/page
+        buttonLink="https://apex-roofing-eosin.vercel.app/" // Link to your master demo section/page
       />
 
       {/* About Section: Introducing you, the driven developer */}
@@ -28,7 +28,7 @@ export default function Home() {
         tagline="Our Story"
         title="Driven to build. Focused on your bottom line."
         description="I am a dedicated Canadian web developer dedicating my summer to a singular mission: building the fastest, highest-converting mobile websites for local service businesses. When you work with Summit Mobile Web, you aren't paying for agency overhead—you are partnering directly with a motivated developer hungry to deliver real, measurable value to your business."
-        imageUrl="/building.webp" // Put a professional, friendly shot of yourself here to build massive trust!
+        imageUrl="/desk.webp" // Put a professional, friendly shot of yourself here to build massive trust!
         imageAlt="Summit Mobile Web Founder"
         buttonText="Get a Free Mockup"
         buttonLink="#contact"

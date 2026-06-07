@@ -50,13 +50,13 @@ export default function ServiceGrid() {
         {/* Column 2 */}
         <ServiceCard 
           icon={<Gauge color="#0f172a" size={40}></Gauge>}
-          title="Blistering Load Speeds" 
+          title="Lightning Fast Load Speeds" 
           description="Slow templates cost you money. Hosted on lightning-fast edge networks, our sites load in milliseconds, meaning frustrated homeowners don't click away to your competitors."        />
 
         {/* Column 3 */}
         <ServiceCard 
           icon={<Search color="#0f172a" size={40}></Search>} 
-          title="Local SEO Foundation" 
+          title="Local SEO" 
           description="No overpriced monthly marketing fees. We engineer clean headings, custom metadata, and structural local schema code directly into your site so Google indexes your business accurately."        />
 
       </div>
